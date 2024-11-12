@@ -1,0 +1,386 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('matrix.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* Light Overlay to Soften Background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Adjust opacity for desired transparency */
+  z-index: -1;
+}
+
+/* Main Content Styling */
+.main-content {
+  padding: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+
+
+.skills-section, .footer, .header {
+  position: relative;
+  z-index: 1; /* Ensure content stays above the overlay */
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  background: transparent; /* Transparent background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar Logo Styling */
+.nav-logo {
+  color: #fff; /* Initial color (white) */
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+/* Logo Hover Effect - Turn Blue */
+.nav-logo:hover {
+  color: #007acc; /* Blue color on hover */
+}
+
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  gap: 1.5em;
+}
+
+/* Navbar Link Styling */
+.nav-links a {
+  color: #fff; /* Visible text color */
+  font-size: 1.1em;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  background-color: transparent; /* Transparent background initially */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Link Hover Effect - Blue Background */
+.nav-links a:hover {
+  background-color: #007acc; /* Same blue as footer buttons */
+  color: #fff; /* Keep text color white */
+}
+
+
+/* Body and Container Flex Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  flex: 1; /* This makes the container expand to fill space between navbar and footer */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Transparent Footer Styling */
+.footer {
+  background-color: transparent; /* Makes footer background transparent */
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: none; /* Remove any shadow */
+}
+
+/* Footer Content Layout */
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Footer Button Styling */
+.footer-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007acc; /* Blue button color */
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.footer-button:hover {
+  background-color: #005f99; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* Hero section styling */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.hero h1 {
+  color: #333;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-buttons .button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  color: #fff;
+  background: #007acc;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.hero-buttons .button:hover {
+  background: #005f99;
+}
+
+/* Skill bar styling */
+.skills-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Skill Bar Styles */
+.skill {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.skill p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-bar {
+  width: 100%;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.skill-bar div {
+  height: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.skill-bar .python { width: 80%; background: #4caf50; }
+.skill-bar .javascript { width: 70%; background: #f7df1e; color: #333; }
+.skill-bar .html-css { width: 85%; background: #e34c26; }
+.skill-bar .cplusplus { width: 65%; background: #00599c; }
+.skill-bar .java { width: 75%; background: #f89820; }
+.skill-bar .sql { width: 60%; background: #2a73cc; }
+
+/* Add some padding around the skills section */
+.skills-section h2 {
+  text-align: center;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+/* General Project Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('matrix.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Light Overlay for Better Readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
+
+/* Main Header Styling */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Projects Section Styling */
+.project {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.project h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 1em;
+  color: #555;
+}
+
+.project video {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+.project a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007acc;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.project a.button:hover {
+  background-color: #005f99;
+}
+
+
+/* Ensure canvas covers the full screen */
+#matrixCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* Ensure canvas stays behind all other content */
+}
+
+/* General Styling for Content Layer */
+.container, .main-content, #navbar, #footer {
+  position: relative;
+  z-index: 1; /* Layered above the canvas */
+}
+
+/* Light Overlay for Better Readability (optional) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: -1;
+}
+
+
+/* Typing Effect Styling */
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #007acc;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.typing-effect {
+  border-right: 2px solid #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20) infinite, blink 0.5s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Blinking cursor */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
