@@ -191,95 +191,87 @@ body {
 .about-section {
   max-width: 800px;
   margin: 20px auto;
-  padding: 30px;
-  background-color: #f8f9fa; /* Slightly off-white for contrast */
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.95); /* More solid background */
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 
-.about-section h1 {
+/* Neon Title Styling for About Me */
+.about-section h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #00ffea,
+    0 0 15px #00ffea,
+    0 0 20px #00ffea,
+    0 0 30px #00e5ff,
+    0 0 40px #00e5ff,
+    0 0 50px #00e5ff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Skills Title Styling */
+.skills-title-container h2 {
   font-size: 2em;
-  margin-bottom: 15px;
-  color: #333;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #00ffea,
+    0 0 15px #00ffea,
+    0 0 20px #00ffea;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
-.about-section p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #555;
-  margin-bottom: 25px;
-}
-
-/* Section Divider */
-.section-divider {
-  width: 50px;
-  height: 4px;
-  background-color: #00bfff;
-  margin: 0 auto 25px auto;
-  border-radius: 5px;
-}
-
-/* Skills Section Styling */
-.skills-section {
+/* Skills Grid Section */
+.skills-grid-section {
   max-width: 800px;
   margin: 0 auto;
+}
+
+/* Skills Grid Styling */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
   padding: 20px;
+  background-color: #4ab8f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.skills-section h2 {
-  text-align: center;
-  font-size: 1.8em;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-/* Skill Styles */
-.skill {
-  margin: 15px 0;
-}
-
-.skill p {
-  margin-bottom: 5px;
-  font-weight: bold;
-  color: #333;
+/* Individual Skill Item Styling */
+.skill-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-}
-
-.skill-icon {
-  font-size: 1.2em;
-  margin-right: 8px;
-  color: #007acc; /* Icon color */
-}
-
-/* Skill Bar Styles */
-.skill-bar {
-  width: 100%;
-  background: #e0e0e0;
+  padding: 15px;
+  background-color: #222;
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.skill-bar div {
-  height: 20px;
-  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   color: #fff;
   font-weight: bold;
-  text-align: center;
-  line-height: 20px;
-  transition: width 0.5s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Gradient Colors for Each Skill */
-.skill-bar .python { width: 80%; background: linear-gradient(90deg, #4caf50, #81c784); }
-.skill-bar .javascript { width: 70%; background: linear-gradient(90deg, #f7df1e, #ffeb3b); color: #333; }
-.skill-bar .html-css { width: 85%; background: linear-gradient(90deg, #e34c26, #ff7043); }
-.skill-bar .cplusplus { width: 65%; background: linear-gradient(90deg, #00599c, #1e88e5); }
-.skill-bar .java { width: 75%; background: linear-gradient(90deg, #f89820, #ffb74d); }
-.skill-bar .sql { width: 60%; background: linear-gradient(90deg, #2a73cc, #64b5f6); }
+.skill-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Skill Icon Styling */
+.skill-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
 
 
 
