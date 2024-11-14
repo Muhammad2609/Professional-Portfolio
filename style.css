@@ -310,36 +310,83 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Projects Section Styling */
-.project {
+/* Main Content Styling */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Project Row Styling */
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Project Box Styling */
+.project-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.85);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 800px;
+  flex: 1 1 48%; /* Responsive width: 48% of the row with flexible height */
+  min-height: 350px;
+  max-width: 600px; /* Limits the max-width */
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.project h2 {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
+/* Alternate Layout for Responsive Display */
+.left-video .project-box:nth-child(odd) .video-container {
+  order: 1;
 }
 
-.project p {
-  font-size: 1em;
-  color: #555;
+.left-video .project-box:nth-child(odd) .description-section {
+  order: 2;
 }
 
-.project video {
-  display: block;
+.right-video .project-box:nth-child(even) .description-section {
+  order: 1;
+}
+
+.right-video .project-box:nth-child(even) .video-container {
+  order: 2;
+}
+
+/* Video Container */
+.video-container video {
   width: 100%;
-  max-width: 600px;
-  margin: 10px auto;
+  height: auto;
   border-radius: 8px;
 }
 
-.project a.button {
+/* Centered Description Section Styling */
+.description-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center;
+  min-height: 350px;
+  max-width: 600px; /* Limits the max-width */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* GitHub and Read More Button Styling */
+.button,
+button[id^="read-more-btn"] {
   display: inline-block;
   padding: 10px 20px;
   color: #fff;
@@ -347,13 +394,50 @@ header {
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  margin-top: 10px;
   text-align: center;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none; /* Remove default button border */
 }
 
-.project a.button:hover {
+/* Hover Effect */
+.button:hover,
+button[id^="read-more-btn"]:hover {
   background-color: #005f99;
 }
+
+
+
+/* Ensure both sections have similar height by setting min-height */
+.project-box .description-section,
+.project-box .video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Responsive Layout Adjustments */
+@media (max-width: 768px) {
+  .project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-box {
+    width: 100%; /* Full-width on smaller screens */
+    max-width: none;
+    margin-bottom: 20px;
+  }
+}
+
+/* Read More hidden text */
+.hidden {
+  display: none;
+}
+
+
 
 
 /* Ensure canvas covers the full screen */

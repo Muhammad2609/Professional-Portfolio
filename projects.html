@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Muhammad Patel Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script> 
+  <script src="script.js" defer></script>
   <script src="matrix.js" defer></script> <!-- Link matrix animation script -->
 </head>
 <body>
@@ -19,14 +19,66 @@
         <p>Here are some of the projects I've worked on.</p>
       </header>
 
-      <section class="project">
-        <h2>Network Protocol Development - 2D#4 Distributed Hash Table</h2>
-        <video controls>
-          <source src="path_to_video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <a href="https://github.com/Muhammad2609/2DHashTable" class="button" target="_blank">View on GitHub</a>
-      </section>
+      <!-- First Row: Video on Left, Description on Right -->
+      <div class="project-row left-video">
+        <div class="project-box video-section">
+          <h2>Network Protocol Development - Oxyheal Booking System</h2>
+          <video controls>
+            <source src="path_to_video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <a href="https://github.com/Muhammad2609/2DHashTable" class="button" target="_blank">View on GitHub</a>
+        </div>
+        
+        <div class="project-box description-section">
+          <p id="short-description-1">This is a brief overview of my work on the Oxyheal Booking System.</p>
+          <p id="full-description-1" class="hidden">
+            This project involves network protocol development, backend integration, and deployment of a booking system. I developed this using various technologies and focused on reliability and scalability.
+          </p>
+          <button id="read-more-btn-1" onclick="toggleDescription(1)">Read More</button>
+        </div>
+      </div>
+
+      <!-- Second Row: Description on Left, Video on Right -->
+      <div class="project-row right-video">
+        <div class="project-box description-section">
+          <p id="short-description-2">This is a brief overview of my work on the Distributed Hash Table.</p>
+          <p id="full-description-2" class="hidden">
+            This project involves developing a 2D#4 distributed hash table for efficient data storage and retrieval. The focus was on creating a peer-to-peer networking solution that is secure and highly scalable.
+          </p>
+          <button id="read-more-btn-2" onclick="toggleDescription(2)">Read More</button>
+        </div>
+        
+        <div class="project-box video-section">
+          <h2>Network Protocol Development - 2D#4 Distributed Hash Table</h2>
+          <video controls>
+            <source src="path_to_video2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <a href="https://github.com/Muhammad2609/2DHashTable" class="button" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Third Row: Video on Left, Description on Right -->
+      <div class="project-row left-video">
+        <div class="project-box video-section">
+          <h2>Another Project Title</h2>
+          <video controls>
+            <source src="path_to_video3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <a href="https://github.com/Muhammad2609/ProjectLink" class="button" target="_blank">View on GitHub</a>
+        </div>
+        
+        <div class="project-box description-section">
+          <p id="short-description-3">This is a brief overview of my third project.</p>
+          <p id="full-description-3" class="hidden">
+            In this project, I focused on developing a scalable solution with a strong emphasis on user experience and efficiency. I used a combination of front-end and back-end technologies to deliver a robust application.
+          </p>
+          <button id="read-more-btn-3" onclick="toggleDescription(3)">Read More</button>
+        </div>
+      </div>
+      
     </div>
   </div>
 
