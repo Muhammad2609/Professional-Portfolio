@@ -3,11 +3,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Load Navbar
   fetch("navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("navbar").innerHTML = data;
-    })
-    .catch(error => console.error("Error loading navbar:", error));
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+
+    // Now that the navbar is loaded, select it and add the scroll event for background change
+    const navBar = document.querySelector(".navbar");
+
+    // Function to toggle background color on scroll
+    function toggleSticky() {
+      if (window.pageYOffset > 0) {
+        navBar.classList.add("sticky");
+        navBar.style.background = "#00144d"; // Dark blue background when scrolled
+      } else {
+        navBar.classList.remove("sticky");
+        navBar.style.background = "transparent"; // Transparent background at the top
+      }
+    }
+
+    // Add scroll event listener to trigger toggleSticky function
+    window.addEventListener("scroll", toggleSticky);
+  })
+  .catch(error => console.error("Error loading navbar:", error));
 
   // Load Footer
   fetch("footer.html")
